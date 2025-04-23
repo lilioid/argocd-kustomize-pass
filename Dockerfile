@@ -1,4 +1,4 @@
-FROM quay.io/argoproj/argocd:v2.14.10
+FROM quay.io/argoproj/argocd:v2.14.11
 
 # provide /usr/local/bin/kustomize5 for compatibility purposes
 USER root
