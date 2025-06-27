@@ -3,21 +3,6 @@
 This is a [build-your-own-image](https://argo-cd.readthedocs.io/en/stable/operator-manual/custom_tools/#byoi-build-your-own-image) of [ArgoCD](https://argoproj.github.io/cd/) with the [kustomize-pass](https://github.com/ftsell/kustomize-pass) plugin preinstalled.
 This effectively enables *ArgoCD* users to extract secrets from [pass](https://www.passwordstore.org/) transparently and have them deployed by *ArgoCD*.
 
-## Disclaimer
-
-kustomize recently had an issue regarding the execution of krm functions (*kustomize-pass* is one) which prevented the execution of it under some circumstances.
-The issue has been fixed in kustomize v5.0.0.
-
-Previous versions of this image shipped a custom kustomize binary at
-`/usr/local/bin/kustomize5` because ArgoCD did not ship with kustomize v5 yet.
-By now ArgoCD has updated its shipped kustomize version so the `/usr/local/bin/kustomize5`
-binary is no longer required.
-It will be removed in a future version of this image but is kept in until March 2024 for
-compatibility reasons.
-
-**After March 31. 2024 `/usr/local/bin/kustomize5` will no longer be shipped in the
-image**.
-
 ## Supported ArgoCD Versions
 
 The latest *ArgoCD* release is automatically rebuilt and published to the GitHub image registry.

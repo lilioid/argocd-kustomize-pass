@@ -1,9 +1,5 @@
 FROM quay.io/argoproj/argocd:v3.0.6
 
-# provide /usr/local/bin/kustomize5 for compatibility purposes
-USER root
-RUN ln -s $(which kustomize) /usr/local/bin/kustomize5
-
 # install kustomize-pass and its dependencies
 ARG KUSTOMIZE_PASS_VERSION=v0.5.1
 USER root
