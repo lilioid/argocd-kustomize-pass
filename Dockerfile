@@ -1,4 +1,4 @@
-FROM quay.io/argoproj/argocd:v3.3.1
+FROM quay.io/argoproj/argocd:v3.3.2
 
 # install kustomize-pass and its dependencies
 ARG KUSTOMIZE_PASS_VERSION=v0.5.1
